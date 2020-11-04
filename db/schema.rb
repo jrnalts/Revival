@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_04_060616) do
+ActiveRecord::Schema.define(version: 2020_11_04_093510) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,8 +29,8 @@ ActiveRecord::Schema.define(version: 2020_11_04_060616) do
 
   create_table "vouchers", force: :cascade do |t|
     t.string "name"
-    t.integer "uniform"
-    t.integer "tel"
+    t.string "uniform"
+    t.string "tel"
     t.bigint "user_id", null: false
     t.integer "serial"
     t.datetime "created_at", precision: 6, null: false

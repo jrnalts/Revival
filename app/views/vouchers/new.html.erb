@@ -10,7 +10,7 @@
   </ul>
 <% end %>
 
-<form class="mx-auto">
+<div class="mx-auto">
   <%= form_for @voucher, url: {action: "create"} do |f| %>
   <div class="form-group mb-2">
     <%= f.label :name, '公司名稱' %>
@@ -25,6 +25,6 @@
     <%= f.text_field :tel %>
   </div>
   <small class="form-text text-muted">We'll never share your information with anyone else.</small>
-    <%= f.submit '送出', class:"btn btn-primary"%>
+    <%= f.submit '送出', class: "btn btn-primary" %>
   <% end %>
-</form>
+</div>
