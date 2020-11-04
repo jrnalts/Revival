@@ -28,9 +28,24 @@ gem 'jbuilder', '~> 2.7'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
+# 會員系統
+gem 'devise', '~> 4.7', '>= 4.7.3'
+
+# Heroku 部署
+gem 'pg', '~> 1.2', '>= 1.2.3'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+
+  # Rspec 測試
+  gem 'rspec-rails'
+  gem 'factory_bot_rails'
+  gem 'faker'
+  gem 'shoulda-matchers'
+
+  # Rails console
+  gem 'hirb', '~> 0.7.3'
 end
 
 group :development do
