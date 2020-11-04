@@ -12,6 +12,10 @@
   </head>
 
   <body>
+    <% if notice %>
+      <%= notice %>
+    <% end %>
+    
     <%= render "shared/navbar" %>
     <%= yield %>
   </body>
