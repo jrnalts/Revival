@@ -36,7 +36,7 @@ class Voucher < ApplicationRecord
         errors.add(:uniform, "您所填寫的統一編號有誤，請確認後重新輸入")
       end
     else
-      if multipled_reduced.reduce(:+)%10 != 0
+      if multipled_reduced.reduce(:+) % 10 != 0
         errors.add(:uniform, "您所填寫的統一編號有誤，請確認後重新輸入")
       end
     end
