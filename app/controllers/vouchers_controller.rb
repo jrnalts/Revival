@@ -1,4 +1,4 @@
-class VoucherController < ApplicationController
+class VouchersController < ApplicationController
   before_action :authenticate_user!
 
   def index
@@ -11,7 +11,7 @@ class VoucherController < ApplicationController
 
   def create
     @voucher = current_user.vouchers.new(voucher_params)
-    created_voucher = Voucher.find_by(tax_id: @voucher.tax_id)
+    created_voucher = Voucher.find_by(uniform: @voucher.uniform)
     if created_voucher
       flash.now[:notice] = "您已於#{created_voucher.created_at}兌換過"
       render :new
@@ -24,6 +24,6 @@ class VoucherController < ApplicationController
 
   private
   def voucher_params
-    params.require(:voucher).permit(:name, :tax_id, :tel, :user_id, :serial)
+    params.require(:voucher).permit(:name, :uniform, :tel, :user_id, :serial)
   end
 end
