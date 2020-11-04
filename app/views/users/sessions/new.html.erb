@@ -1,4 +1,6 @@
-<h2>Log in</h2>
+<h2>使用者登入</h2>
+
+<span>請您先登入再使用復興券兌換系統，謝謝！</span>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
@@ -19,7 +21,7 @@
   <% end %>
 
   <div class="actions">
-    <%= f.submit "Log in" %>
+    <%= f.submit "登入" %>
   </div>
 <% end %>
 

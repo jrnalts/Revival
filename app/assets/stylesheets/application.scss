@@ -13,3 +13,24 @@
  *= require_tree .
  *= require_self
  */
+
+@import "bootstrap/scss/bootstrap";
+
+.nav-link span {
+  color: white !important;
+  font-size: 16px;
+}
+.btn-primary {
+  background-color: cadetblue !important;
+  border: cadetblue;
+  color: white !important;
+}
+.box {
+  margin: auto;
+  margin-top: 5em;
+  border: 1px solid cadetblue;
+  padding: 1em;
+}
+.message {
+  color: red;
+}
